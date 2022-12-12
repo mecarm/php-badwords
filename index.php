@@ -1,7 +1,10 @@
 <?php 
 
 //Creo una variabile in php
-$variabile = 'lorem ipsum dolor malet'
+$variabile = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint quam a dolore quae enim perferendis, strunz itaque modi optio rerum recusandae odit incidunt exercitationem? Alias, eveniet. Voluptatem fugiat reiciendis excepturi modi!';
+$variabileModificata = str_replace($_GET['name'], '***', $variabile);
+
+//GEt method
 
 ?>
 <!DOCTYPE html>
@@ -13,6 +16,11 @@ $variabile = 'lorem ipsum dolor malet'
     <title>Document</title>
 </head>
 <body>
-    <h1>Il paragrafo della variabile è: <?php echo $variabile ?> </h1>
+    
+    <p>Il paragrafo della variabile è: <?php echo $variabile ?> </p>
+    <p>La lunghezza della variabile è: <?php echo strlen($variabile) ?> </p>
+    <p>Il paragrafo modificato è: <?php echo $variabileModificata ?></p>
+    <p>La lunghezza della variabile è: <?php echo strlen($variabileModificata) ?> </p>
+
 </body>
 </html>
