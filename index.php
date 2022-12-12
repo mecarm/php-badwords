@@ -2,9 +2,8 @@
 
 //Creo una variabile in php
 $variabile = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint quam a dolore quae enim perferendis, strunz itaque modi optio rerum recusandae odit incidunt exercitationem? Alias, eveniet. Voluptatem fugiat reiciendis excepturi modi!';
+//modifico la variabile con Il GET ricevuto nell'URL
 $variabileModificata = str_replace($_GET['name'], '***', $variabile);
-
-//GEt method
 
 ?>
 <!DOCTYPE html>
@@ -16,10 +15,13 @@ $variabileModificata = str_replace($_GET['name'], '***', $variabile);
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- Stampo la variabile -->
     <p>Il paragrafo della variabile è: <?php echo $variabile ?> </p>
+    <!-- Stampo la lunghezza variabile -->
     <p>La lunghezza della variabile è: <?php echo strlen($variabile) ?> </p>
+    <!-- Stampo la variabile modificata-->
     <p>Il paragrafo modificato è: <?php echo $variabileModificata ?></p>
+    <!-- Stampo la lunghezza della variabile modificata -->
     <p>La lunghezza della variabile è: <?php echo strlen($variabileModificata) ?> </p>
 
 </body>
