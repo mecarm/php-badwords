@@ -19,10 +19,11 @@ $variabileModificata = str_replace($_GET['name'], '***', $variabile);
     <p>Il paragrafo della variabile è: <?php echo $variabile ?> </p>
     <!-- Stampo la lunghezza variabile -->
     <p>La lunghezza della variabile è: <?php echo strlen($variabile) ?> </p>
+
     <!-- Stampo la variabile modificata-->
-    <p>Il paragrafo modificato è: <?php echo $variabileModificata ?></p>
+    <p>Il paragrafo modificato è: <?php  if( empty($_GET['name']) ){echo 'Non hai inserito ancora una parola da censurare';} else{echo $variabileModificata;} ?></p>
     <!-- Stampo la lunghezza della variabile modificata -->
-    <p>La lunghezza della variabile è: <?php echo strlen($variabileModificata) ?> </p>
+    <p>La lunghezza della variabile è: <?php if( empty($_GET['name']) ){echo 'Non è stato ancora generato dato che non hai inserito la parola da censurare';} else{echo strlen($variabileModificata);} ?> </p>
 
 </body>
 </html>
